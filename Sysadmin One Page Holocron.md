@@ -64,8 +64,6 @@ SCP Inverso
 
     scp root@HOST:/PATH/jdk-8u221-linux-x64.tar.gz /PATH
 
-######## FICHEROS ########
-
 ## LS
 
 Ver tamaño de los ficheros en megas
@@ -84,6 +82,7 @@ Eliminar link Simbolico
 
     rm linkname
 
+
 ## DU
 
     du -sh
@@ -91,6 +90,7 @@ Eliminar link Simbolico
 Muestra tambien las carpetas ocultas
 
     du -sh .[A-z0-9]* *|sort -n
+
 
 ## GREP
 
@@ -107,6 +107,16 @@ grep -B 3 "EXT3-fs: mounted" /var/log/dmesg.0  ---->
 Empieza a leer el fichero por el final
 
     tac test.txt
+
+## FIND
+
+Buscar ficheros colgando de / que se llamen index.php  
+
+    find / -name index.php
+
+Buscar ficheros desde la ruta dodne estes que se han modificado en los ultimos minutos 120 minutos
+
+    find . -type f -mmin -120 -print0 | xargs -0 /bin/ls -ltr
 
 ## TOUCH
 
