@@ -5,7 +5,8 @@
 # TAR 
 
 ## Archivos .tar.gz
-Comprimir: tar -czvf empaquetado.tar.gz /carpeta/a/empaquetar/
+Comprimir: 
+    tar -czvf empaquetado.tar.gz /carpeta/a/empaquetar/
 
 Descomprimir: `tar -zxvf archivo.tar.gz --directory /ruta_del_archivo/carpeta`
 
