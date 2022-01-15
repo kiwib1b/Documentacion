@@ -5,27 +5,43 @@
 # TAR 
 
 ## Archivos .tar.gz
-Comprimir: 
+Comprimir
 
     tar -czvf empaquetado.tar.gz /carpeta/a/empaquetar/
 
-Descomprimir: `tar -zxvf archivo.tar.gz --directory /ruta_del_archivo/carpeta`
+Descomprimir
+
+    tar -zxvf archivo.tar.gz --directory /ruta_del_archivo/carpeta
 
 ## Archivos .tar
-Empaquetar: `tar -cvf paquete.tar /dir/a/comprimir/`
+Empaquetar 
 
-Desempaquetar: `tar -xvf paquete.tar`
+    tar -cvf paquete.tar /dir/a/comprimir/
+
+Desempaquetar 
+
+    tar -xvf paquete.tar
 
 
 # GZIP
 ## Archivos .gz
-Comprimir: `gzip -9 index.php`
+Comprimir 
 
-Descomprimir: `gzip -d index.php.gz`
+    gzip -9 index.php
+
+Descomprimir 
+
+    gzip -d index.php.gz
 
 ## Archivos .zip
-Comprimir: `zip archivo.zip carpeta`
+Comprimir 
 
-Descomprimir: `unzip archivo.zip`
+    zip archivo.zip carpeta
 
-Listar: `unzip -l archivo.zip`
+Descomprimir 
+
+    unzip archivo.zip
+
+Listar 
+
+    unzip -l archivo.zip
