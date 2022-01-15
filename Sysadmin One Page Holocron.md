@@ -1,7 +1,7 @@
 # Documentacion
 # Linux
-<a href="https://github.com/kiwib1b/Documentacion/wiki/GZIP"><img src="https://img.shields.io/badge/Linux-GZIP-blue?style=for-the-badge"></a>
-<a href="https://github.com/kiwib1b/Documentacion/wiki/TARP"><img src="https://img.shields.io/badge/Linux-TAR-blue?style=for-the-badge"></a>
+<a href="https://github.com/kiwib1b/Documentacion/blob/main/Sysadmin%20One%20Page%20Holocron.md#gzip"><img src="https://img.shields.io/badge/Linux-GZIP-blue?style=for-the-badge"></a>
+<a href="https://github.com/kiwib1b/Documentacion/blob/main/Sysadmin%20One%20Page%20Holocron.md#tar"><img src="https://img.shields.io/badge/Linux-TAR-blue?style=for-the-badge"></a>
 # TAR 
 
 ## Archivos .tar.gz
