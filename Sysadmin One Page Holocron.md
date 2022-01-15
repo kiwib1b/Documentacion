@@ -45,3 +45,18 @@ Descomprimir
 Listar 
 
     unzip -l archivo.zip
+
+
+# SCP
+
+    scp tomcat.properties root@HOST:/PATH
+    scp /PATH/tomcat.properties root@HOST:/PATH
+
+SCP con clave publica
+
+    scp -i /PATH/private.rsa /PATH/tomcat.properties root@HOST:/PATH
+
+SCP Inverso
+
+    scp root@HOST:/PATH/jdk-8u221-linux-x64.tar.gz /PATH
+
