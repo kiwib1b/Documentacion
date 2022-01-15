@@ -84,6 +84,14 @@ Eliminar link Simbolico
 
     rm linkname
 
+## DU
+
+    du -sh
+
+Muestra tambien las carpetas ocultas
+
+    du -sh .[A-z0-9]* *|sort -n
+
 ## GREP
 
 Muestra las tres líneas posteriores a lo que busques
@@ -131,3 +139,55 @@ Vaciar fichero
 Ejecuta un comando una vez cada N segundos y muestra la salida por pantalla.
 
     watch -n 1 COMANDO
+
+## AT
+
+Sirve para programar una tarea que se ejecute una unica vez.
+
+    at HH:MMam MES DD 
+    comando
+    control+D
+
+Ver los Jobs programados
+
+    atq
+
+Borrar un Job (N es el numero del Job que podemos sacar con atq )
+
+    atrm N
+
+Example
+
+    # at HH:MMam MES DD
+    # at 08:00am Mar 16
+    at> /root/scripts//script.sh
+    at> CRTL+D
+    job 48 at 2020-03-16 08:00
+
+
+## CRONTAB
+
+Aqui estan los crontab de todos los usuarios
+
+    /var/spool/cron 
+
+## LOGROTATE 
+
+    /etc/Tomcat6/apache-tomcat-6.0.35/logs/*.log {
+        notifempty
+        copytruncate
+        daily
+        rotate 10
+        compress
+        missingok
+    }
+
+    /etc/Tomcat6/apache-tomcat-6.0.35/logs/catalina.out {
+        notifempty
+        copytruncate
+        dateext
+        daily
+        rotate 10
+        compress
+        missingok
+    }
