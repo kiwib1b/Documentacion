@@ -256,7 +256,7 @@ Activar / Desactivar  sincronizacion de hora vmware.
     vmware-toolbox-cmd timesync disable
     vmware-toolbox-cmd timesync status
 
-######## LDAP ########
+## LDAP 
 
 El proceso que gestiona el LDAP en linux es sssd
 
@@ -467,8 +467,7 @@ Si tiene acceso a la maquina debe poder mostrarnos los datos del usuario
 </tr>
 </tbody>
 </table>
-<a href="https://redhatlinux.guru/2018/05/22/pacemaker-cheat-sheet/" target="_blank>Source</a>
-<a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/configuring_the_red_hat_high_availability_add-on_with_pacemaker/s1-clusterstat-haar" target="_blank>RHEL</a>
+<a href="https://redhatlinux.guru/2018/05/22/pacemaker-cheat-sheet/" target="_blank>Source </a>
 
 ##LVM
 
@@ -490,4 +489,4 @@ $HOME/.lvm               - lvm history
 
 lvrename para cambiar el nombre de un volumen
 
-	lvrename /dev/mapper/vg00-lv_sapmnt_BSA /dev/mapper/vg00-lv_sapmnt_XXX
+	lvrename /dev/mapper/vg00-lv_mnt /dev/mapper/vg00-lv_mnt_XXX
