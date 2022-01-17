@@ -476,60 +476,69 @@ Listar toda la informacion de los dispositivos de bloque disponibles
 
     lsblk
 
-<h3>Creating and Modifying Stonith Resources</h3>
+<h3>Terminology</h3>
 <table>
 <thead>
 <tr>
-<th align="left">Command</th>
+<th align="left">Name</th>
 <th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">pcs stonith list</td>
-<td align="left">List available fence agents</td>
+<td align="left">PV</td>
+<td align="left">Physical volume (e.g. a partition, RAID array, etc)</td>
 </tr>
 <tr>
-<td align="left">pcs stonith describe [fence agent]</td>
-<td align="left">List configuration settings for fence agent</td>
+<td align="left">VG</td>
+<td align="left">Volume Group - a collection of PV’s that we can use the space from</td>
 </tr>
 <tr>
-<td align="left">pcs stonith describe [stonith_id]</td>
-<td align="left">List configuration setting for stonith agent</td>
+<td align="left">LV</td>
+<td align="left">Logical volume - a partition created from space in a VG</td>
+</tr>
+</tbody>
+</table>
+<h3>File and Directory Locations</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Location</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">/etc/lvm</td>
+<td align="left">Default lvm directory location</td>
 </tr>
 <tr>
-<td align="left">pcs stonith create [stonith_id][resource] options&#8230;</td>
-<td align="left">Create stonith agent</td>
+<td align="left">/etc/lvm/lvm.conf </td>
+<td align="left">Main lvm configuration file</td>
 </tr>
 <tr>
-<td align="left">pcs stonith show [stonith_id]</td>
-<td align="left">Display currently configured setting of stonith agent</td>
+<td align="left">$HOME/.lvm</td>
+<td align="left">lvm history</td>
 </tr>
 <tr>
-<td align="left">pcs stonith update [stonith_id] options&#8230;.</td>
-<td align="left">Update stonith configuration</td>
+<td align="left">/etc/lvm/backup</td>
+<td align="left">Where the automatic backups go</td>
 </tr>
 <tr>
-<td align="left">pcs stonith delete [stonith_id]</td>
-<td align="left">Delete stonith agent</td>
+<td align="left">/etc/lvm/cache</td>
+<td align="left">Persistent filter cache</td>
 </tr>
 <tr>
-<td align="left">pcs stonith cleanup [stonith_id]</td>
-<td align="left">Cleanup stonith agent failures</td>
+<td align="left">/etc/lvm/archive</td>
+<td align="left">Where automatic archives go after a volume group change</td>
+</tr>
+<tr>
+<td align="left">/var/lock/lvm</td>
+<td align="left">Lock files to prevent metadata corruption</td>
 </tr>
 </tbody>
 </table>
 
-### LVM Directories
-/etc/lvm                - default lvm directory location
-/etc/lvm/backup         - where the automatic backups go
-/etc/lvm/cache          - persistent filter cache
-/etc/lvm/archive        - where automatic archives go after a volume group change
-/var/lock/lvm           - lock files to prevent metadata corruption
-
-### LVM Files
-/etc/lvm/lvm.conf       - main lvm configuration file
-$HOME/.lvm               - lvm history 
 
 
 lvrename para cambiar el nombre de un volumen
