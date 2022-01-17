@@ -424,7 +424,7 @@ Si tiene acceso a la maquina debe poder mostrarnos los datos del usuario
 </tr>
 </tbody>
 </table>
-<h2>Creating and Modifying Stonith Resources</h2>
+<h3>Creating and Modifying Stonith Resources</h3>
 <table>
 <thead>
 <tr>
@@ -470,7 +470,7 @@ Si tiene acceso a la maquina debe poder mostrarnos los datos del usuario
 <a href="https://redhatlinux.guru/2018/05/22/pacemaker-cheat-sheet" target="_blank">Source</a>
 
 
-##LVM
+## LVM
 
 Listar toda la informacion de los dispositivos de bloque disponibles
 
