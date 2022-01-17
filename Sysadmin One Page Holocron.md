@@ -64,6 +64,7 @@ SCP Inverso
 
     scp root@HOST:/PATH/jdk-8u221-linux-x64.tar.gz /PATH
 
+
 ## LS
 
 Ver tamaño de los ficheros en megas
@@ -81,6 +82,19 @@ Crear link simbolico
 Eliminar link Simbolico
 
     rm linkname
+
+
+## CHATTR
+
+Bloquear un fichero o ruta para que no se puedan encribir en ellos.
+
+chattr +i /etc/passwd
+
+Desbloquear un fichero o ruta para que no se puedan encribir en ellos.
+
+chattr -i /etc/passwd
+
+Se recomienda usarlo para bloquear la ruta donde montas un NFS para que en caso de que no este montado no escriba nada en local.
 
 
 ## DU
@@ -102,11 +116,13 @@ Muestra las tres líneas anteriores a lo que busques
 
 grep -B 3 "EXT3-fs: mounted" /var/log/dmesg.0  ----> 
 
+
 ## TAC
 
 Empieza a leer el fichero por el final
 
     tac test.txt
+
 
 ## FIND
 
@@ -201,3 +217,85 @@ Aqui estan los crontab de todos los usuarios
         compress
         missingok
     }
+
+
+##EOF
+
+Podemos escribir en un fichero usando un comando
+
+cat <<_EOF > /etc/sudoers.d/USER
+USER ALL=(ALL) NOPASSWD: ALL
+_EOF
+exit
+
+## FOR
+
+Bucle para hacer relacion de confianza 
+
+    for x in HOST1 HOST2; do echo -e "==========$x=========="; "ssh-copy-id -i /root/.ssh/id_rsa.pub" $x ; done
+
+Bucle para sacar un ipyime de un listado de maquinas que estan en un fichero
+
+    for x in $(cat fichero.txt); do echo -e "==========$x=========="; ssh $x "uptime" ; done
+
+## UDEV
+
+Archivo UDEV con la configuracion de las tarjetas de red de una maquina. Si tras un vMotion de una VM vemos que las IPs no cuadran con las MACs, vaciar el fichjero y reiniciar la VM. 
+
+    /etc/udev/rules.d/70-persistent-net.rules
+
+## NTP
+
+Archivos de configuracion del servicio NTP
+
+    cat /etc/ntp.conf
+
+Activar / Desactivar  sincronizacion de hora vmware.
+
+    vmware-toolbox-cmd timesync enable
+    vmware-toolbox-cmd timesync disable
+    vmware-toolbox-cmd timesync status
+
+######## LDAP ########
+
+El proceso que gestiona el LDAP en linux es sssd
+
+Lo primero a compobar que el servicio este levantado
+
+Para comprobar si un usuario tiene acceso 
+
+    id usuario en la maquina 
+    
+Si tiene acceso a la maquina debe poder mostrarnos los datos del usuario
+
+## PACEMAKER
+
+pcs status
+
+pcs cluster status
+
+pcs status resources
+
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/configuring_the_red_hat_high_availability_add-on_with_pacemaker/s1-clusterstat-haar
+
+##LVM
+
+Listar toda la informacion de los dispositivos de bloque disponibles
+
+    lsblk
+
+### LVM Directories
+/etc/lvm                - default lvm directory location
+/etc/lvm/backup         - where the automatic backups go
+/etc/lvm/cache          - persistent filter cache
+/etc/lvm/archive        - where automatic archives go after a volume group change
+/var/lock/lvm           - lock files to prevent metadata corruption
+
+### LVM Files
+/etc/lvm/lvm.conf       - main lvm configuration file
+$HOME/.lvm               - lvm history 
+
+
+lvrename para cambiar el nombre de un volumen
+
+	lvrename /dev/mapper/vg00-lv_sapmnt_BSA /dev/mapper/vg00-lv_sapmnt_XXX
