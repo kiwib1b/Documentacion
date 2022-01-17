@@ -499,6 +499,45 @@ Listar toda la informacion de los dispositivos de bloque disponibles
 </tr>
 </tbody>
 </table>
+<h3>Commands</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Level</th>
+<th align="left">List</th>
+<th align="left">Create</th>
+<th align="left">Remove</th>
+<th align="left">Extend</th>
+<th align="left">Reduce</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">PV</td>
+<td align="left">pvdisplay | pvs</td>
+<td align="left">pvcreate partition</td>
+<td align="left">N/A</td>
+<td align="left">N/A</td>
+<td align="left">N/A</td>
+</tr>
+<tr>
+<td align="left">VG</td>
+<td align="left">vgdisplay | vgs</td>
+<td align="left">vgcreate NewVGName PVname</td>
+<td align="left">vgreduce NewVGName PVname</td>
+<td align="left">vgextend VGname PVname</td>
+<td align="left">vgchange -a n my_volume_group && vgremove my_volume_group</td>
+</tr>
+<tr>
+<td align="left">LV</td>
+<td align="left">lvdisplay | lvs</td>
+<td align="left">lvcreate -LSIZE -nNewLVName VGname</td>
+<td align="left">lvreduce -LnewSIZE /dev/VGNAME/LVname</td>
+<td align="left">lvextend -r -L12G /dev/myvg/homevol Extiende el volumen a 12Gb en total | lvextend -r -L+1G /dev/myvg/homevol | lvextend -r -l +100%FREE /dev/myvg/homevol</td>
+<td align="left">lvremove /dev/myvg/homevol</td>
+</tr>
+</tbody>
+</table>
 <h3>File and Directory Locations</h3>
 <table>
 <thead>
