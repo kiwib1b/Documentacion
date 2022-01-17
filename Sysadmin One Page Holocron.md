@@ -476,6 +476,50 @@ Listar toda la informacion de los dispositivos de bloque disponibles
 
     lsblk
 
+<h3>Creating and Modifying Stonith Resources</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Command</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">pcs stonith list</td>
+<td align="left">List available fence agents</td>
+</tr>
+<tr>
+<td align="left">pcs stonith describe [fence agent]</td>
+<td align="left">List configuration settings for fence agent</td>
+</tr>
+<tr>
+<td align="left">pcs stonith describe [stonith_id]</td>
+<td align="left">List configuration setting for stonith agent</td>
+</tr>
+<tr>
+<td align="left">pcs stonith create [stonith_id][resource] options&#8230;</td>
+<td align="left">Create stonith agent</td>
+</tr>
+<tr>
+<td align="left">pcs stonith show [stonith_id]</td>
+<td align="left">Display currently configured setting of stonith agent</td>
+</tr>
+<tr>
+<td align="left">pcs stonith update [stonith_id] options&#8230;.</td>
+<td align="left">Update stonith configuration</td>
+</tr>
+<tr>
+<td align="left">pcs stonith delete [stonith_id]</td>
+<td align="left">Delete stonith agent</td>
+</tr>
+<tr>
+<td align="left">pcs stonith cleanup [stonith_id]</td>
+<td align="left">Cleanup stonith agent failures</td>
+</tr>
+</tbody>
+</table>
+
 ### LVM Directories
 /etc/lvm                - default lvm directory location
 /etc/lvm/backup         - where the automatic backups go
