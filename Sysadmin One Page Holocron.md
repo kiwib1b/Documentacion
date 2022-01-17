@@ -276,22 +276,202 @@ pcs cluster status
 
 pcs status resources
 
+						<h2>File and Directory Locations</h2>
 <table>
-  <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
+<thead>
+<tr>
+<th align="left">Location</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">/var/lib/pacemaker/cib/cib.xml</td>
+<td align="left">Primary cluster configuration file</td>
+</tr>
+<tr>
+<td align="left">/var/log/cluster/corosync.log</td>
+<td align="left">Primary cluster log file</td>
+</tr>
+<tr>
+<td align="left">/usr/lib/ocf/resource.d/heartbeat/</td>
+<td align="left">Directory where resource scripts are located</td>
+</tr>
+</tbody>
+</table>
+<h2>Check Cluster Status</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Command</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">pcs cluster status</td>
+<td align="left">Display status of cluster nodes</td>
+</tr>
+<tr>
+<td align="left">pcs status &#8211;full (double dashes)</td>
+<td align="left">Display detailed cluster status of nodes and resources</td>
+</tr>
+<tr>
+<td align="left">pcs resource</td>
+<td align="left">Display status of all resources and resource groups</td>
+</tr>
+</tbody>
+</table>
+<h2>Modify Cluster Nodes</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Command</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">pcs cluster standby</td>
+<td align="left">Place node in standby mode</td>
+</tr>
+<tr>
+<td align="left">pcs cluster unstandby</td>
+<td align="left">Remove node from standby mode</td>
+</tr>
+</tbody>
+</table>
+<h2>Managing Running Resources</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Command</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">pcs resource move [resource_name] node name</td>
+<td align="left">Move resource to another node</td>
+</tr>
+<tr>
+<td align="left">pcs resource restart [resource_name]</td>
+<td align="left">Restart resource on current node</td>
+</tr>
+<tr>
+<td align="left">pcs resource enable [resource_name]</td>
+<td align="left">Start resource on current node</td>
+</tr>
+<tr>
+<td align="left">pcs resource disable [resource_name]</td>
+<td align="left">Stop resource on current node</td>
+</tr>
+</tbody>
+</table>
+<h2>Debugging Resources</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Command</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">pcs resource debug-start [source_name]</td>
+<td align="left">Force resource to start on node where command is executed showing debug information. Use <code>--full</code> for even more verbose output.</td>
+</tr>
+<tr>
+<td align="left">pcs resource debug-stop [source_name]</td>
+<td align="left">Force resource to stop on node where command is executed showing debug information. Use <code>--full</code> for even more verbose output.</td>
+</tr>
+<tr>
+<td align="left">pcs resource debug-monitor [source_name]</td>
+<td align="left">Force resource to be monitored on node where command is executed showing debug information. Use <code>--full</code> for even more verbose output.</td>
+</tr>
+</tbody>
+</table>
+<h2>Creating and Modifying Resources</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Command</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">pcs resource agents</td>
+<td align="left">List available resource agents</td>
+</tr>
+<tr>
+<td align="left">pcs resource describe [resource]</td>
+<td align="left">List configuration setting for resource</td>
+</tr>
+<tr>
+<td align="left">pcs resource create [resource id][resource] options&#8230;</td>
+<td align="left">Create resource</td>
+</tr>
+<tr>
+<td align="left">pcs resource show [resource id]</td>
+<td align="left">Display currently configured setting of resource</td>
+</tr>
+<tr>
+<td align="left">pcs resource update [resource id] options&#8230;.</td>
+<td align="left">Update resource configuration</td>
+</tr>
+<tr>
+<td align="left">pcs resource delete [resource id]</td>
+<td align="left">Delete resource</td>
+</tr>
+<tr>
+<td align="left">pcs resource cleanup [resource id]</td>
+<td align="left">Cleanup resource failures</td>
+</tr>
+</tbody>
+</table>
+<h2>Creating and Modifying Stonith Resources</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Command</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">pcs stonith list</td>
+<td align="left">List available fence agents</td>
+</tr>
+<tr>
+<td align="left">pcs stonith describe [fence agent]</td>
+<td align="left">List configuration settings for fence agent</td>
+</tr>
+<tr>
+<td align="left">pcs stonith describe [stonith_id]</td>
+<td align="left">List configuration setting for stonith agent</td>
+</tr>
+<tr>
+<td align="left">pcs stonith create [stonith_id][resource] options&#8230;</td>
+<td align="left">Create stonith agent</td>
+</tr>
+<tr>
+<td align="left">pcs stonith show [stonith_id]</td>
+<td align="left">Display currently configured setting of stonith agent</td>
+</tr>
+<tr>
+<td align="left">pcs stonith update [stonith_id] options&#8230;.</td>
+<td align="left">Update stonith configuration</td>
+</tr>
+<tr>
+<td align="left">pcs stonith delete [stonith_id]</td>
+<td align="left">Delete stonith agent</td>
+</tr>
+<tr>
+<td align="left">pcs stonith cleanup [stonith_id]</td>
+<td align="left">Cleanup stonith agent failures</td>
+</tr>
+</tbody>
 </table>
 
 https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/configuring_the_red_hat_high_availability_add-on_with_pacemaker/s1-clusterstat-haar
