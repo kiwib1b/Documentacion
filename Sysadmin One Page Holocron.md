@@ -276,7 +276,7 @@ pcs cluster status
 
 pcs status resources
 
-						<h2>File and Directory Locations</h2>
+<h3>File and Directory Locations</h3>
 <table>
 <thead>
 <tr>
@@ -299,7 +299,7 @@ pcs status resources
 </tr>
 </tbody>
 </table>
-<h2>Check Cluster Status</h2>
+<h3>Check Cluster Status</h3>
 <table>
 <thead>
 <tr>
@@ -322,7 +322,7 @@ pcs status resources
 </tr>
 </tbody>
 </table>
-<h2>Modify Cluster Nodes</h2>
+<h3>Modify Cluster Nodes</h3>
 <table>
 <thead>
 <tr>
@@ -341,7 +341,7 @@ pcs status resources
 </tr>
 </tbody>
 </table>
-<h2>Managing Running Resources</h2>
+<h3>Managing Running Resources</h3>
 <table>
 <thead>
 <tr>
@@ -368,7 +368,7 @@ pcs status resources
 </tr>
 </tbody>
 </table>
-<h2>Debugging Resources</h2>
+<h3>Debugging Resources</h3>
 <table>
 <thead>
 <tr>
@@ -391,7 +391,7 @@ pcs status resources
 </tr>
 </tbody>
 </table>
-<h2>Creating and Modifying Resources</h2>
+<h3>Creating and Modifying Resources</h3>
 <table>
 <thead>
 <tr>
