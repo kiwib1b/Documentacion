@@ -270,12 +270,6 @@ Si tiene acceso a la maquina debe poder mostrarnos los datos del usuario
 
 ## PACEMAKER
 
-pcs status
-
-pcs cluster status
-
-pcs status resources
-
 <h3>File and Directory Locations</h3>
 <table>
 <thead>
