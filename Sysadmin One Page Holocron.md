@@ -467,8 +467,8 @@ Si tiene acceso a la maquina debe poder mostrarnos los datos del usuario
 </tr>
 </tbody>
 </table>
-
-https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/configuring_the_red_hat_high_availability_add-on_with_pacemaker/s1-clusterstat-haar
+<a href="https://redhatlinux.guru/2018/05/22/pacemaker-cheat-sheet/" target="_blank>Source</a>
+<a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/configuring_the_red_hat_high_availability_add-on_with_pacemaker/s1-clusterstat-haar" target="_blank>RHEL</a>
 
 ##LVM
 
