@@ -467,8 +467,7 @@ Si tiene acceso a la maquina debe poder mostrarnos los datos del usuario
 </tr>
 </tbody>
 </table>
-<a href="https://redhatlinux.guru/2018/05/22/pacemaker-cheat-sheet/" target="_blank>Source </a>
-
+<a href="https://redhatlinux.guru/2018/05/22/pacemaker-cheat-sheet" target="_blank">Source</a>
 ##LVM
 
 Listar toda la informacion de los dispositivos de bloque disponibles
