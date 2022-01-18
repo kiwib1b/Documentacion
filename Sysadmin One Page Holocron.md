@@ -268,6 +268,24 @@ Para comprobar si un usuario tiene acceso
     
 Si tiene acceso a la maquina debe poder mostrarnos los datos del usuario
 
+## ROUTE
+
+Para ver las rutas de una maquina
+
+    route -n
+
+## IP
+
+Para ver las rutas de una maquina
+
+    ip route list
+
+## NETSTAT
+
+Para ver las rutas de una maquina
+
+    netstat -rn
+
 ## PACEMAKER
 
 <h3>File and Directory Locations</h3>
